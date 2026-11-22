@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Folio English · 영어 읽기와 단어장</title><link rel="stylesheet" href="style.css"><script defer src="jszip.min.js"></script><script defer src="pako.min.js"></script><script type="module" src="app.mjs"></script></head>
+<body>
+<header><div class="brand"><span class="mark">F</span><div>Folio English<small>영어 읽기와 단어장</small></div></div><button id="open" class="primary">＋ 문서 열기</button></header>
+<div class="layout">
+<aside class="shelf"><h2>내 서재</h2><button class="drop" id="drop"><span aria-hidden="true">⇧</span><strong>파일 끌어다 놓기</strong><small>TXT · PDF · HWP · HWPX</small></button><input hidden id="file" type="file" accept=".txt,.pdf,.hwp,.hwpx"><div id="books"></div></aside>
+<main><div class="toolbar"><span id="kind">샘플 문서</span><div class="sizes"><button id="smaller" aria-label="글자 작게">A−</button><button id="larger" aria-label="글자 크게">A＋</button></div></div>
+<article><h1 id="title"></h1><p class="hint">단어를 누르면 뜻을, ↗ 표시를 누르면 숙어·구어 표현·문법 설명을 볼 수 있어요.</p><div id="reading"></div></article>
+<footer><button id="prev">이전</button><span id="page"></span><button id="next">다음</button></footer></main>
+<aside id="panel" class="panel"><div class="tabs"><button id="dictionary" aria-selected="true">학습 사전</button><button id="vocabulary" aria-selected="false">내 단어장 <span id="count">0</span></button><button id="grammar" aria-selected="false">내 문법 <span id="grammar-count">0</span></button></div><div class="review-toolbar"><button id="review" class="primary" aria-pressed="false">복습하기</button></div><div id="details" aria-live="polite"></div></aside>
+</div><div id="notice" role="status" hidden></div>
+</body></html>
